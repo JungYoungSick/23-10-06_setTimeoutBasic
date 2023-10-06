@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* *{margin: 0; padding: 0; box-sizing: border-box;}
+    #root{
+      width: 100vw;
+      height: 100vh;
+      background-color: salmon;
+    } */
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div id="sosa"></div>
+  </div>
+  <script>
+    // const sosa = document.getElementById('sosa');
+    // console.log(sosa);
+    // sosa.style.width = "100px";
+    // sosa.style.height = "100px";
+    // sosa.style.backgroundColor = "black";
+    // sosa.style.position = "absolute";
+    // sosa.style.top = "100px"
+
+    // const root = document.getElementById('root')
+    // let Up = 0;
+    function text() {
+      const sosa = document.getElementById('sosa').innerText += "클릭";
+    }
+    let interval = setInterval(text, 500);
+
+    let toggle = true;
+    document.onclick = function(i) {
+      if(toggle) {
+        clearInterval(interval);
+        toggle = false;
+      }else{
+        interval = setInterval(text, 500);
+        toogle = true;
+      }
+    }
+
+    </script>
+</body>
+</html>
